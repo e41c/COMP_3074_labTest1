@@ -1,6 +1,5 @@
 package ca.gbc.labtest1;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,6 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import android.graphics.Color;
+
+
 
 public class SecondActivity extends AppCompatActivity {
     private RelativeLayout secondLayout;
@@ -16,6 +19,17 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        Toolbar toolbar = findViewById(R.id.toolbar); // Use the correct Toolbar class
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle(R.string.second_activity_title);
+
+        // Enable the up button in the action bar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         // Define the colorListView variable
         ListView colorListView = findViewById(R.id.colorListView); // Initialize the colorListView variable
@@ -46,3 +60,4 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 }
+

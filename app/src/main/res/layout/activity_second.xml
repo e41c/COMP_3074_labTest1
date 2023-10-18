@@ -6,10 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+
+
     <RelativeLayout
         android:id="@+id/secondLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:background="@android:color/white">
 
         <!-- Your ListView and other UI elements go here -->
@@ -19,6 +28,10 @@
     <ListView
         android:id="@+id/colorListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
 
 </RelativeLayout>
+
+
+

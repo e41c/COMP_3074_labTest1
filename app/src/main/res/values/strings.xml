@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">YourApp</string>
+    <string name="app_name">LabTest1</string>
     <string name="main_activity_label">MainActivity</string>
-    <string name="student_info">Your Name - Student ID</string>
+    <string name="student_info">Eric Grigor - Student #100668121</string>
     <string name="button_colors">Colors</string>
+    <string name="second_activity_title">Second Activity</string>
+
 </resources>
